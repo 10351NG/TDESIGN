@@ -1,6 +1,6 @@
 <script setup>
-import CardContainer from "./../components/CardContainer.vue";
 import TheWelcome from "./../components/home/TheWelcome.vue";
+import BaseDesign from "@/components/home/BaseDesign.vue";
 import Papa from "papaparse";
 
 import { ref, onMounted } from "vue";
@@ -24,7 +24,7 @@ onMounted(() => {
 
 <template>
   <TheWelcome />
-  <CardContainer />
+  <BaseDesign />
 </template>
 
 <style scoped></style>
