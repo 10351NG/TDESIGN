@@ -7,7 +7,6 @@
       “Entiendo cómo minimalismo la selección y uso de elementos relevantes,
       dejando a un lado el ruido visual.”
     </h1>
-    <h6>Mateo González C. (CEO y Fundador)</h6>
   </section>
 </template>
 
