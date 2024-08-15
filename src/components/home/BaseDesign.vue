@@ -1,49 +1,57 @@
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+
+// Define the props
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  p1: {
+    type: Object,
+    required: true,
+    default: () => ({ IMG1: "", IMG_TXT: "" }),
+  },
+  p2: {
+    type: Object,
+    required: true,
+    default: () => ({ IMG1: "", IMG_TXT: "" }),
+  },
+  p3: {
+    type: Object,
+    required: true,
+    default: () => ({ IMG1: "", IMG_TXT: "" }),
+  },
+});
+</script>
 
 <template>
   <section class="container">
-    <h1>FOTOGRAFÍA / EDICIÓN</h1>
+    <h1>{{ title }}</h1>
+
     <div class="one">
       <div class="base">
         <div class="brand">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portafolio-web-end.appspot.com/o/fotografía%20y%20edición%20de%20moda%2FWHITE%20TXT.png?alt=media&token=31a70f78-53c4-40a9-9982-e5900b0e34e6"
-            alt=""
-          />
+          <img :src="p1.IMG_TXT" alt="texture image" />
         </div>
         <div class="photo">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portafolio-web-end.appspot.com/o/fotografía%20y%20edición%20de%20moda%2FWHITE%201.png?alt=media&token=8a9f9d62-000c-4b6d-b1e7-e3a2639d37d8"
-            alt=""
-          />
+          <img :src="p1.IMG1" alt="proyect photo" />
         </div>
       </div>
       <div class="base">
         <div class="brand">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portafolio-web-end.appspot.com/o/fotografía%20y%20edición%20de%20moda%2FTXT%20II.png?alt=media&token=97af3911-18f9-4f57-a32f-17281deceda3"
-            alt=""
-          />
+          <img :src="p2.IMG_TXT" alt="texture image" />
         </div>
         <div class="photo">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portafolio-web-end.appspot.com/o/fotografía%20y%20edición%20de%20moda%2FCLAUDIA%20HERRERA%205.png?alt=media&token=b1d20f31-faf0-493a-b0fb-0cf45a1daab3"
-            alt=""
-          />
+          <img :src="p2.IMG1" alt="proyect photo" />
         </div>
       </div>
       <div class="base">
         <div class="brand">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portafolio-web-end.appspot.com/o/fotografía%20y%20edición%20de%20moda%2FTXT%20III_ISIS.png?alt=media&token=d0f01fcf-627e-4bb3-b323-39ac62f10699"
-            alt=""
-          />
+          <img :src="p3.IMG_TXT" alt="texture image" />
         </div>
         <div class="photo">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portafolio-web-end.appspot.com/o/fotografía%20y%20edición%20de%20moda%2FISAPHARMA%201.png?alt=media&token=6a6dbd43-0fa4-4508-8d38-93e327f5d9b3"
-            alt=""
-          />
+          <img :src="p3.IMG1" alt="proyect photo" />
         </div>
       </div>
     </div>

@@ -20,11 +20,26 @@ onMounted(() => {
     }
   );
 });
+
+function getProyectByTitle(title) {
+  return proyects.value.find((proyect) => proyect.TITULO === title);
+}
 </script>
 
 <template>
   <TheWelcome />
-  <BaseDesign />
+  <BaseDesign
+    title="FOTOGRAFÍA / EDICIÓN"
+    :p1="getProyectByTitle('WHITE')"
+    :p2="getProyectByTitle('CLAUDIA HERRERA')"
+    :p3="getProyectByTitle('ISISPHARMA')"
+  />
+  <BaseDesign
+    title="BRANDING"
+    :p1="getProyectByTitle('ASTER')"
+    :p2="getProyectByTitle('ASTER')"
+    :p3="getProyectByTitle('ASTER')"
+  />
 </template>
 
 <style scoped></style>
